@@ -1,13 +1,54 @@
 <mainlayout>:
-	width: 10.0
-	BoxLayout:
-		size_hint_y: 0.1
+    width:10.0   
+    
+    BoxLayout:
+        pos:root.x,root.top-self.height
+	    size_hint_y: 0.1
         size_hint_x: 0.3
         spacing: 10.0
         width: 100.0
         orientation: 'vertical'
-		Button:
-			text:'btn1'
         Button:
-            text: 'Button'
-    
+	        text:'btn1'
+            color: 1,0,0,1
+        Button:
+            text: 'Btn1'
+            color: 0,1,0,1
+    BoxLayout:
+        id:bl1
+        padding: 1
+        spacing: 1
+        width: 500
+        pos:root.x+100, root.top - 50
+        orientation:'horizontal'
+        
+        CheckBox:
+            size_hint_y:0.2
+            size_hint_x:0.2
+            id:cb1
+            active:True
+        Label:
+            
+            size_hint_y: None
+            height: self.texture_size[1]
+            text:'Setting 1- aku suka explaination panjang2 pasal memang nak tulis panjang'
+            text_size: self.width, None
+            
+
+    BoxLayout:
+        padding: 1
+        spacing: 1
+        width: 500
+        pos: root.x+100, root.top - 100
+        orientation:'horizontal'
+        CheckBox:
+            size_hint_y:0.2
+            size_hint_x:0.2
+            active:True
+        Label:
+            
+            text_size:self.width, None
+            size_hint_y:None
+            text:'Setting saya suka makan nasi panas, walaupun tak suka'
+            height: self.texture_size[1]
+	
