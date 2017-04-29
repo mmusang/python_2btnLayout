@@ -7,12 +7,12 @@ from kivy.uix.widget import Widget
 class mainlayout(Widget):
     pass
 
-class SimpleKivy4(App):
+class main(App):
     def build(self):
         return mainlayout()
 
 if __name__ == "__main__":
-    SimpleKivy4().run()
+    main().run()
 #add something
             
 
