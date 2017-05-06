@@ -13,7 +13,8 @@ ScreenManagement:
     id:main1
 	name:'main1'
     BoxLayout:
-        pos:root.x,root.top-self.height
+		id:box1
+        pos:root.x+100,root.top-self.height
 	    size_hint_y: 0.1
         size_hint_x: 0.3
         spacing: 10.0
@@ -26,13 +27,15 @@ ScreenManagement:
         Button:
             text: 'Btn1'
             color: 0,1,0,1
-	BoxLayout:
-		Label:
-			text:'Main Setting Page'
-			color:1,0,1,1
-			canvas.before:
-				Color:
-					rgba: 0, 0, 0, 1	
+	Label:
+		pos:10, root.height - (box1.height *2)	
+		size_hint_y: 0.1
+		size_hint_x: 0.3
+		text:'Main Setting Page'
+		color:1,0,1,1
+		canvas.before:
+			Color:
+				rgba: 0, 0, 0, 1	
 
 <AnotherScreen>:
     width:10.0   
